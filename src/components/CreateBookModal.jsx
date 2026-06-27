@@ -54,9 +54,9 @@ export default function CreateBookModal({ isOpen, onClose, onCreate }) {
     <VisualEditorShell
       isOpen={isOpen}
       onClose={handleClose}
-      title="Design Your Scrapbook Book"
+      title="Design Your Volume"
       onSave={handleSave}
-      saveLabel="Create Book"
+      saveLabel="Create Volume"
       saveDisabled={!title.trim()}
     >
       <div className="grid lg:grid-cols-12 gap-8 items-start">
@@ -67,7 +67,7 @@ export default function CreateBookModal({ isOpen, onClose, onCreate }) {
           animate={{ opacity: 1, x: 0 }}
           className="lg:col-span-5 relative flex flex-col items-center"
         >
-          <p className="text-[9px] font-bold text-ink-muted uppercase tracking-widest mb-3 pr-2 font-sans">Cover Preview</p>
+          <p className="text-[9px] font-semibold text-ink-muted uppercase tracking-[0.15em] mb-3 pr-2 font-sans">Cover Preview</p>
           
           <div className="relative w-full max-w-[200px]">
             {/* 3D hardcover binder mockup */}
@@ -107,14 +107,14 @@ export default function CreateBookModal({ isOpen, onClose, onCreate }) {
         >
           {/* Cover photo uploader */}
           <div>
-            <p className="text-[9px] font-bold text-ink-muted uppercase tracking-widest mb-2 pl-0.5 font-sans">Cover Image</p>
+            <p className="text-[9px] font-semibold text-ink-muted uppercase tracking-[0.15em] mb-2 pl-0.5 font-sans">Cover Image</p>
             <ImageCanvas
               images={coverImage}
               onImagesChange={setCoverImage}
               multiple={false}
               aspect="3/4"
-              emptyLabel="Upload Cover Image"
-              emptyHint="Supports PNG, JPG, or JPEG"
+              emptyLabel="Choose a cover photo"
+              emptyHint="The face of your story — PNG, JPG, or JPEG"
             />
           </div>
 
@@ -124,7 +124,7 @@ export default function CreateBookModal({ isOpen, onClose, onCreate }) {
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="Name your scrapbook volume..."
+              placeholder="Give this volume a name..."
               className="
                 w-full bg-transparent border-none outline-none
                 font-display text-xl sm:text-2xl font-bold text-ink italic
@@ -134,7 +134,7 @@ export default function CreateBookModal({ isOpen, onClose, onCreate }) {
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              placeholder="A few words about what this book holds..."
+              placeholder="What stories will live inside these pages?"
               rows={2}
               className="
                 w-full bg-transparent border-none outline-none resize-none

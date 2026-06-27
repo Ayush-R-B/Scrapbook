@@ -9,9 +9,9 @@ export default function Input({
   ...props
 }) {
   return (
-    <div className={`flex flex-col gap-1.5 ${className}`}>
+    <div className={`flex flex-col gap-2 ${className}`}>
       {label && (
-        <label className="text-xs font-semibold text-ink-muted uppercase tracking-wider pl-1">{label}</label>
+        <label className="text-[10px] font-semibold text-ink-muted uppercase tracking-[0.15em] pl-1">{label}</label>
       )}
       <input
         type={type}
@@ -19,10 +19,10 @@ export default function Input({
         value={value}
         onChange={onChange}
         className={`
-          w-full px-4 py-2.5 rounded-xl bg-paper border border-beige/95
-          text-ink placeholder:text-brown-light/45 text-sm sm:text-base
-          shadow-[inset_0_1.5px_3px_rgba(50,38,31,0.03)] focus:outline-none focus:ring-2 focus:ring-soft-pink/40 focus:border-pink-accent
-          transition-all duration-200
+          w-full px-4 py-3 rounded-xl bg-paper-warm border border-beige/80
+          text-ink placeholder:text-brown-light/50 text-sm sm:text-base
+          shadow-inner-sm focus:outline-none focus:ring-2 focus:ring-soft-pink/50 focus:border-pink-accent/60
+          transition-all duration-300
         `}
         {...props}
       />

@@ -45,9 +45,9 @@ export default function AddMemoryModal({ isOpen, onClose, onSave, bookId }) {
     <VisualEditorShell
       isOpen={isOpen}
       onClose={handleClose}
-      title="Create Timeline Memory Page"
+      title="Capture a Moment"
       onSave={handleSave}
-      saveLabel="Save Page"
+      saveLabel="Preserve Memory"
     >
       <motion.div
         initial={{ opacity: 0, y: 16 }}
@@ -56,13 +56,13 @@ export default function AddMemoryModal({ isOpen, onClose, onSave, bookId }) {
       >
         {/* Photo collage attachment container */}
         <div>
-          <p className="text-[9px] font-bold text-ink-muted uppercase tracking-widest mb-2 pl-0.5 font-sans">Attach Photo(s)</p>
+          <p className="text-[9px] font-semibold text-ink-muted uppercase tracking-[0.15em] mb-2 pl-0.5 font-sans">Attach Photo(s)</p>
           <ImageCanvas
             images={images}
             onImagesChange={setImages}
             multiple
-            emptyLabel="Drop your Polaroid moment"
-            emptyHint="Drag a photo here or click to browse"
+            emptyLabel="Drop your polaroid here"
+            emptyHint="A photo that holds the feeling of this moment"
           />
         </div>
 
@@ -72,7 +72,7 @@ export default function AddMemoryModal({ isOpen, onClose, onSave, bookId }) {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="Give this moment a title..."
+            placeholder="What do you call this moment?"
             className="
               w-full bg-transparent border-none outline-none
               font-display text-2xl font-bold text-ink italic
@@ -83,7 +83,7 @@ export default function AddMemoryModal({ isOpen, onClose, onSave, bookId }) {
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="Write your story here — what made this memory special?"
+            placeholder="Tell the story — what made this day unforgettable?"
             rows={4}
             className="
               w-full bg-transparent border-none outline-none resize-none
@@ -98,7 +98,7 @@ export default function AddMemoryModal({ isOpen, onClose, onSave, bookId }) {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5">
             <div className="space-y-2">
               <span className="text-[9px] uppercase font-bold tracking-widest text-ink-muted pl-0.5 flex items-center gap-1.5 font-sans">
-                <Smile className="w-3.5 h-3.5" /> What was the vibe?
+                <Smile className="w-3.5 h-3.5" /> How did it feel?
               </span>
               <div className="flex flex-wrap gap-2">
                 {moods.map((m) => (

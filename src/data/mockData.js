@@ -61,12 +61,12 @@ export const bookTypes = [
 ]
 
 export const features = [
-  { id: 'personal', title: 'Personal Journals', icon: '📔', description: 'Your private space for daily thoughts, reflections, and quiet moments.' },
-  { id: 'couple', title: 'Couple Scrapbooks', icon: '💕', description: 'Celebrate your love story with shared memories and milestones.' },
-  { id: 'friendship', title: 'Friendship Books', icon: '👯', description: 'Capture inside jokes, adventures, and forever-friend moments.' },
-  { id: 'travel', title: 'Travel Albums', icon: '✈️', description: 'Relive every trip with photos, maps, and wanderlust vibes.' },
-  { id: 'family', title: 'Family Memories', icon: '👨‍👩‍👧', description: 'Preserve generations of stories in one beautiful book.' },
-  { id: 'custom', title: 'Custom Books', icon: '✨', description: 'Design your own theme for any occasion or creative vision.' },
+  { id: 'personal', title: 'Personal Journals', icon: '📔', description: 'A quiet sanctuary for your innermost thoughts, late-night reflections, and the moments only you understand.' },
+  { id: 'couple', title: 'Couple Scrapbooks', icon: '💕', description: 'Every glance, every adventure, every ordinary evening that became extraordinary — woven into your love story.' },
+  { id: 'friendship', title: 'Friendship Books', icon: '👯', description: 'Inside jokes, road trips, and the kind of laughter that makes your cheeks hurt — preserved forever.' },
+  { id: 'travel', title: 'Travel Albums', icon: '✈️', description: 'The sunsets you chased, the streets you wandered, the feeling of being somewhere new and alive.' },
+  { id: 'family', title: 'Family Memories', icon: '👨‍👩‍👧', description: 'Generations of stories, Sunday dinners, and the roots that hold you together — all in one treasured volume.' },
+  { id: 'custom', title: 'Custom Books', icon: '✨', description: 'For every chapter life writes — graduations, milestones, or simply the story only you can tell.' },
 ]
 
 export const users = [
